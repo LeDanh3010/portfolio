@@ -7,6 +7,7 @@ import Feedbacks from "./components/Feedbacks";
 import Contact from "./components/Contact";
 import { BrowserRouter } from "react-router-dom";
 import StartCanvas from "./components/canvas/Stars";
+
 import Works from "./components/Works";
 
 const App = () => {
