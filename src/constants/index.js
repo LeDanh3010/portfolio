@@ -23,6 +23,9 @@ import {
   jobit,
   tripguide,
   threejs,
+  btech,
+  tokuden,
+  planex,
 } from "../assets";
 
 export const navLinks = [
@@ -116,22 +119,21 @@ const technologies = [
 
 const experiences = [
   {
-    title: "React.js Developer",
-    company_name: "Starbucks",
-    icon: starbucks,
+    title: "技術開発",
+    company_name: "BTECH 有限会社",
+    icon: btech,
     iconBg: "#383E56",
-    date: "March 2020 - April 2021",
+    date: "2014年 9月 - 2017年 8月",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Orcad、CCSコンパイラ、およびProteusなどのソフトウェアを使用して、駐車システムと指紋認証、順番待ち受付のシステムの設計と開発を行う。",
+      "システム障害に関連する問題の管理と対策を行う。",
+      "顧客の要求に基づいて新しいシステムを開発する。",
     ],
   },
   {
     title: "React Native Developer",
-    company_name: "Tesla",
-    icon: tesla,
+    company_name: "Planex 株式会社",
+    icon: planex,
     iconBg: "#E6DEDD",
     date: "Jan 2021 - Feb 2022",
     points: [
@@ -143,8 +145,8 @@ const experiences = [
   },
   {
     title: "Web Developer",
-    company_name: "Shopify",
-    icon: shopify,
+    company_name: "Tokuden 株式会社",
+    icon: tokuden,
     iconBg: "#383E56",
     date: "Jan 2022 - Jan 2023",
     points: [
@@ -154,19 +156,19 @@ const experiences = [
       "Participating in code reviews and providing constructive feedback to other developers.",
     ],
   },
-  {
-    title: "Full stack Developer",
-    company_name: "Meta",
-    icon: meta,
-    iconBg: "#E6DEDD",
-    date: "Jan 2023 - Present",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
+  // {
+  //   title: "Full stack Developer",
+  //   company_name: "Meta",
+  //   icon: meta,
+  //   iconBg: "#E6DEDD",
+  //   date: "Jan 2023 - Present",
+  //   points: [
+  //     "Developing and maintaining web applications using React.js and other related technologies.",
+  //     "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
+  //     "Implementing responsive design and ensuring cross-browser compatibility.",
+  //     "Participating in code reviews and providing constructive feedback to other developers.",
+  //   ],
+  // },
 ];
 
 const testimonials = [
