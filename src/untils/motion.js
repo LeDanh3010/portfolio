@@ -86,3 +86,21 @@ export const staggerContainer = (staggerChildren, delayChildren) => {
     },
   };
 };
+
+export const animationVariants = {
+  initial: {
+    rotateY: 0,
+    scale: 1,
+    transition: { type: "spring", stiffness: 300, damping: 20 },
+  },
+  hover: {
+    rotateY: 15,
+    scale: 1.6,
+    transition: { type: "spring", stiffness: 300, damping: 20 },
+  },
+  clicked: {
+    rotateY: 0,
+    scale: 1,
+    transition: { type: "spring", stiffness: 300, damping: 20, duration: 0.5 },
+  },
+};

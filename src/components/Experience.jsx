@@ -8,8 +8,12 @@ import { experiences } from "../constants";
 import { SectionWrapper } from "../hoc";
 import { textVariant } from "../untils/motion";
 import { motion } from "framer-motion";
+import { animationVariants } from "../untils/motion";
 
 const ExperienceCard = ({ experience }) => {
+  const handleClick = () => {
+    window.open(experience.link, "_blank");
+  };
   return (
     <VerticalTimelineElement
       contentStyle={{
@@ -20,13 +24,21 @@ const ExperienceCard = ({ experience }) => {
       date={experience.date}
       iconStyle={{ background: experience.iconBg }}
       icon={
-        <div className="flex justify-center items-center w-full h-full">
+        <motion.div
+          className="flex justify-center items-center w-full h-full cursor-pointer"
+          variants={animationVariants}
+          initial="initial"
+          whileHover="hover"
+          whileTap="clicked"
+          onClick={handleClick}
+        >
           <img
             src={experience.icon}
             alt={experience.company_name}
             className="w-[60%] h-[60%] object-contain"
+            onClick={handleClick}
           />
-        </div>
+        </motion.div>
       }
     >
       <div>
@@ -41,12 +53,14 @@ const ExperienceCard = ({ experience }) => {
 
       <ul className="mt-5 list-disc ml-5 space-y-2">
         {experience.points.map((point, index) => (
-          <li
-            key={`experience-point-${index}`}
-            className="text-white-100 text-[14px] pl-1 tracking-wider"
-          >
-            {point}
-          </li>
+          <>
+            <li
+              key={`experience-point-${index}`}
+              className="text-white-100 text-[14px] pl-1 tracking-wider"
+            >
+              {point}
+            </li>
+          </>
         ))}
       </ul>
     </VerticalTimelineElement>
