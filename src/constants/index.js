@@ -26,6 +26,9 @@ import {
   btech,
   tokuden,
   planex,
+  cadmeister,
+  solidwork,
+  Catia,
 } from "../assets";
 
 export const navLinks = [
@@ -45,24 +48,36 @@ export const navLinks = [
 
 const services = [
   {
-    title: "Web Developer",
+    title: "Solidworks",
     icon: web,
   },
   {
-    title: "React Native Developer",
+    title: "Catia",
     icon: mobile,
   },
   {
-    title: "Backend Developer",
+    title: "Cadmeister",
     icon: backend,
   },
   {
-    title: "Content Creator",
+    title: "Nx graphic",
     icon: creator,
   },
 ];
 
 const technologies = [
+  {
+    name: "Catia",
+    icon: Catia,
+  },
+  {
+    name: "cadmeister",
+    icon: cadmeister,
+  },
+  {
+    name: "solidwork",
+    icon: solidwork,
+  },
   {
     name: "HTML 5",
     icon: html,
@@ -75,10 +90,7 @@ const technologies = [
     name: "JavaScript",
     icon: javascript,
   },
-  {
-    name: "TypeScript",
-    icon: typescript,
-  },
+
   {
     name: "React JS",
     icon: reactjs,
@@ -87,10 +99,7 @@ const technologies = [
     name: "Redux Toolkit",
     icon: redux,
   },
-  {
-    name: "Tailwind CSS",
-    icon: tailwind,
-  },
+
   {
     name: "Node JS",
     icon: nodejs,
@@ -106,14 +115,6 @@ const technologies = [
   {
     name: "git",
     icon: git,
-  },
-  {
-    name: "figma",
-    icon: figma,
-  },
-  {
-    name: "docker",
-    icon: docker,
   },
 ];
 

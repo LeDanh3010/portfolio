@@ -8,6 +8,9 @@ import menu from "./menu.svg";
 import close from "./close.svg";
 
 import css from "./tech/css.png";
+import Catia from "./tech/Catia.png";
+import solidwork from "./tech/solidwork.png";
+import cadmeister from "./tech/cadmeister.png";
 import docker from "./tech/docker.png";
 import figma from "./tech/figma.png";
 import git from "./tech/git.png";
@@ -65,4 +68,7 @@ export {
   btech,
   tokuden,
   planex,
+  Catia,
+  solidwork,
+  cadmeister
 };
