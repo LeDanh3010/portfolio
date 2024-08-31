@@ -7,31 +7,52 @@ import { SectionWrapper } from "../hoc/index";
 
 const ServiceCard = ({ index, title, icon }) => {
   return (
-    <Tilt className="xs:w-[250px] w-full">
-      <motion.div
-        variants={fadeIn("right", "spring", index * 0.5, 0.75)}
-        className="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card"
+    // <Tilt className="xs:w-[250px] w-full">
+    //   <motion.div
+    //     variants={fadeIn("right", "spring", index * 0.5, 0.75)}
+    //     className="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card"
+    //   >
+    //     <div
+    //       options={{
+    //         max: 45,
+    //         scale: 1,
+    //         speed: 450,
+    //       }}
+    //       className="bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col"
+    //     >
+    //       <img
+    //         src={icon}
+    //         alt="web-development"
+    //         className="w-16 h-16 object-contain"
+    //       />
+
+    //       <h3 className="text-white text-[20px] font-bold text-center">
+    //         {title}
+    //       </h3>
+    //     </div>
+    //   </motion.div>
+    // </Tilt>
+    <motion.div variants={fadeIn("right", "spring", index * 0.5, 0.75)}>
+      <Tilt
+        options={{
+          max: 45,
+          scale: 1,
+          speed: 450,
+        }}
+        className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full"
       >
-        <div
-          options={{
-            max: 45,
-            scale: 1,
-            speed: 450,
-          }}
-          className="bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col"
-        >
+        <div className=" w-full h-[230px]">
           <img
             src={icon}
             alt="web-development"
-            className="w-16 h-16 object-contain"
+            className="w-full h-full object-cover rounded-2xl"
           />
-
-          <h3 className="text-white text-[20px] font-bold text-center">
-            {title}
-          </h3>
         </div>
-      </motion.div>
-    </Tilt>
+        <div className="mt-5">
+          <h3 className="text-white font-bold text-[24px]">{title}</h3>
+        </div>
+      </Tilt>
+    </motion.div>
   );
 };
 
@@ -48,7 +69,7 @@ const About = () => {
       >
         私はベトナムのニャチャン市出身で、日本に住んで働いて約4年になります。主な仕事は、SolidWorks、CATIA、Cadmeisterなどの3Dおよび2Dデザインソフトを使用して、プラスチック製品、治具、射出成形金型に関連する図面を作成することです。また、Ansysなどの解析ソフトを使用して、プラスチック製品の構造や硬度を解析しています。私はこれらのデザインソフトを多くの年数にわたり熟練して使用してきたため、与えられた仕事に迅速に対応できると自信を持っています。
       </motion.p>
-      <div className="mt-20 flex flex-wrap gap-10">
+      <div className="mt-20 flex flex-wrap gap-7">
         {services.map((service, index) => (
           <ServiceCard key={service.title} index={index} {...service} />
         ))}

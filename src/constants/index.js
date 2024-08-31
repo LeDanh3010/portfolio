@@ -29,6 +29,12 @@ import {
   cadmeister,
   solidwork,
   Catia,
+  catiaImg,
+  nxImg,
+  solidImg,
+  cadmeisterImg,
+  orcadImg,
+  proteusImg,
 } from "../assets";
 
 export const navLinks = [
@@ -49,19 +55,27 @@ export const navLinks = [
 const services = [
   {
     title: "Solidworks",
-    icon: web,
+    icon: solidImg,
   },
   {
     title: "Catia",
-    icon: mobile,
+    icon: catiaImg,
   },
   {
     title: "Cadmeister",
-    icon: backend,
+    icon: cadmeisterImg,
   },
   {
     title: "Nx graphic",
-    icon: creator,
+    icon: nxImg,
+  },
+  {
+    title: "Orcad",
+    icon: orcadImg,
+  },
+  {
+    title: "Proteus",
+    icon: proteusImg,
   },
 ];
 
@@ -190,9 +204,9 @@ const testimonials = [
 
 const projects = [
   {
-    name: "Car Rent",
+    name: "順番待ち受付システム",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      "標準的な自動順番待ちシステムについてのものです。このシステムの中核には、中央制御ユニットがあり、内部ネットワークを介してさまざまなコンポーネントに接続されています。顧客は、タッチスクリーンのチケット発行ポイントで順番番号を受け取り、この発行ポイントは中央制御ユニットに接続されており、オプションでGSMモデムを通じて通知を送信することができます。発行されたチケット番号は、現在の案内番号とそれに対応するカウンター番号を表示するメインディスプレイボードに表示されます。追加のコンポーネントには、番号案内のためのアンプとスピーカー、次の顧客を呼び出すために各サービスカウンターに設置されたタッチセンサー式の呼び出しパネル、および個別のカウンター番号を表示する二次表示ボードがあります。また、顧客フィードバック用のタッチセンサー式評価キーボードや、手動ボタンベースのチケット発行ポイントもオプションとして用意されています。",
     tags: [
       {
         name: "react",
