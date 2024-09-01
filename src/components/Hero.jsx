@@ -32,7 +32,7 @@ const Hero = () => {
               type: "spring",
               delay: 0.5,
               damping: 8,
-              stiffness: 300,
+              stiffness: 100,
             }}
           >
             こんにちは。
@@ -46,7 +46,7 @@ const Hero = () => {
               type: "spring",
               delay: 2,
               damping: 8,
-              stiffness: 300,
+              stiffness: 100,
             }}
           >
             私は射出金型および <br className="sm:block hidden" />

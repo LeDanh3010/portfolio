@@ -2,12 +2,10 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { SectionWrapper } from "../hoc";
-import { fadeIn, textVariant } from "../untils/motion";
+import { fadeIn, textHoverVariant, textVariant } from "../untils/motion";
 import { projects } from "../constants";
-import { AnimatePresence } from "framer-motion";
 import { MdKeyboardDoubleArrowRight } from "react-icons/md";
-import { OverlayScrollbarsComponent } from "overlayscrollbars-react";
-import "overlayscrollbars/overlayscrollbars.css";
+import Modal from "../untils/modal";
 
 const disableBodyScroll = () => {
   document.body.style.overflow = "hidden";
@@ -17,14 +15,10 @@ const enableBodyScroll = () => {
   document.body.style.overflow = "";
 };
 
-const backdropVariant = () => ({
-  hidden: { opacity: 0 },
-  visible: { opacity: 1 },
-});
-
 const ProjectCard = ({
   index,
   name,
+  company,
   description,
   tags,
   image,
@@ -39,8 +33,6 @@ const ProjectCard = ({
     } else {
       enableBodyScroll();
     }
-
-    // Cleanup function to re-enable scrolling if the modal is closed
     return () => enableBodyScroll();
   }, [showModal]);
   return (
@@ -78,7 +70,10 @@ const ProjectCard = ({
           </div>
           <div className="mt-5">
             <h3 className="text-white font-bold text-[24px]">{name}</h3>
-            <p className="mt-2 text-secondary text-[14px] line-clamp-3 ">
+            <p className="mt-2 text-secondary text-[15px] font-medium">
+              {company}
+            </p>
+            <p className="mt-2 text-secondary text-[14px] line-clamp-2 ">
               {description}
             </p>
           </div>
@@ -94,58 +89,28 @@ const ProjectCard = ({
             ))}
           </div> */}
 
-          <div
-            className="mt-4 flex flex-row items-center text-sky-400 hover:underline cursor-pointer"
-            onClick={handleOpenModal}
-          >
-            <span className="font-medium">詳細</span>
-            <MdKeyboardDoubleArrowRight className="text-[20px]" />
+          <div className="mt-4 flex  text-sky-400 cursor-pointer">
+            <motion.div
+              onClick={handleOpenModal}
+              variants={textHoverVariant}
+              whileHover="hover"
+              whileTap="clicked"
+              className="flex flex-row items-center"
+            >
+              <span className="font-medium">詳細</span>
+              <MdKeyboardDoubleArrowRight className="text-[20px]" />
+            </motion.div>
           </div>
         </motion.div>
       </motion.div>
-      <AnimatePresence>
-        {showModal && (
-          <motion.div
-            className="flex justify-center items-center fixed inset-0 sm:p-16 py-16 bg-black bg-opacity-50 z-50 "
-            variants={backdropVariant}
-            initial="hidden"
-            animate="visible"
-            onClick={handleCloseModal}
-          >
-            <motion.div
-              className={`${styles.padding} flex max-w-6xl bg-tertiary sm:max-h-[720px] max-h-[620px]  sm:rounded-2xl rounded-xl relative bottom-0 top-0`}
-              onClick={(e) => e.stopPropagation()}
-            >
-              <OverlayScrollbarsComponent
-                options={{ scrollbars: { autoHide: "scroll" } }}
-                className="flex relative w-full left-0 bottom-0 px-2 "
-              >
-                <div className="w-full md:h-[450px] h-[250px]">
-                  <img
-                    src={image}
-                    alt={name}
-                    className="w-full h-full object-cover sm:rounded-2xl rounded-xl"
-                  />
-                </div>
-                <div className="w-full mt-3">
-                  <h3 className="text-white font-bold sm:text-[24px] text-[20px]">
-                    {name}
-                  </h3>
-                  <p className="mt-2 text-secondary sm:text-[18px] text-[15px] text-justify">
-                    {description}
-                  </p>
-                </div>
-              </OverlayScrollbarsComponent>
-              <button
-                className="absolute right-5 top-1 sm:text-[30px] text-[23px] font-bold"
-                onClick={handleCloseModal}
-              >
-                &times;
-              </button>
-            </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+      <Modal
+        handleCloseModal={handleCloseModal}
+        showModal={showModal}
+        name={name}
+        image={image}
+        description={description}
+        company={company}
+      />
       {/* <div className="relative w-full h-[230px]">
           <img
             src={image}

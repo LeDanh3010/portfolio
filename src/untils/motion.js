@@ -104,3 +104,37 @@ export const animationVariants = {
     transition: { type: "spring", stiffness: 300, damping: 20, duration: 0.5 },
   },
 };
+
+export const textHoverVariant = {
+  hover: {
+    originX: 0,
+    scale: [1.1, 1, 1.1, 1, 1.1, 1],
+    transition: { duration: 1, ease: "linear" },
+  },
+  clicked: {
+    scale: 1,
+    color: "#ffff",
+  },
+};
+
+export const backdropVariant = {
+  hidden: { opacity: 0 },
+  visible: {
+    transition: { ease: "easeOut", duration: 0.5 },
+    opacity: 1,
+  },
+};
+
+export const modalVariant = {
+  hidden: { opacity: 0, y: "-100vh" },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { type: "spring", delay: 0.3, damping: 15, mass: 0.7 },
+  },
+  exit: {
+    opacity: 0,
+    y: "-100vh",
+    transition: { ease: "easeOut", duration: 0.5 },
+  },
+};

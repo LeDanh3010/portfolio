@@ -205,8 +205,9 @@ const testimonials = [
 const projects = [
   {
     name: "順番待ち受付システム",
+    company: "Btech 有限会社",
     description:
-      "標準的な自動順番待ちシステムについてのものです。このシステムの中核には、中央制御ユニットがあり、内部ネットワークを介してさまざまなコンポーネントに接続されています。顧客は、タッチスクリーンのチケット発行ポイントで順番番号を受け取り、この発行ポイントは中央制御ユニットに接続されており、オプションでGSMモデムを通じて通知を送信することができます。発行されたチケット番号は、現在の案内番号とそれに対応するカウンター番号を表示するメインディスプレイボードに表示されます。追加のコンポーネントには、番号案内のためのアンプとスピーカー、次の顧客を呼び出すために各サービスカウンターに設置されたタッチセンサー式の呼び出しパネル、および個別のカウンター番号を表示する二次表示ボードがあります。また、顧客フィードバック用のタッチセンサー式評価キーボードや、手動ボタンベースのチケット発行ポイントもオプションとして用意されています。",
+      "自動順番待ちシステムの設計とプログラミングを従事し、このシステムは中央制御ユニットを中心に、タッチスクリーンのチケット発行ポイントやメインディスプレイボード、アンプとスピーカー、タッチセンサー式の呼び出しパネルなどが内部ネットワークを介して連携しています。また、オプションでGSMモデムによる通知機能や、顧客フィードバック用の評価キーボードも含まれます。これらのシステムの設計や開発には、ProteusやOrCADなどのソフトウェアを活用します。",
     tags: [
       {
         name: "react",
@@ -225,9 +226,10 @@ const projects = [
     source_code_link: "https://github.com/",
   },
   {
-    name: "Job IT",
+    name: "自動車部品金型",
+    company: "Planex 株式会社",
     description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+      "お客さんからの依頼を受けて、インジェクション金型の設計および製作を担当します。主にインパネやバンパーなどの製品に関連するサーフェス設計を行います。またルーフパネル、ヘミングテーブルスやキンテールゲートなどのプレス金型の設計にも従事し、治具に関連する図面作成や生産効率の向上に向けた設計改善も行います。",
     tags: [
       {
         name: "react",
@@ -246,9 +248,10 @@ const projects = [
     source_code_link: "https://github.com/",
   },
   {
-    name: "Trip Guide",
+    name: "ボビン製品設計",
+    company: "Tokuden 株式会社",
     description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+      "CadSuperやSolidWorksのソフトでボビンの製品に関連する設計業務に従事し、製品の構造および硬度を解析するためにANSYSソフトウェアを使用して検証を行いました。また、顧客の要求に基づき、製品の改良にも積極的に取り組んできました。さらに、製品の金型設計にも携わり、製造プロセス全体の最適化を目指します。",
     tags: [
       {
         name: "nextjs",
