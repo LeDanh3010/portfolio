@@ -271,4 +271,44 @@ const projects = [
   },
 ];
 
-export { services, technologies, experiences, testimonials, projects };
+const hobbies = [
+  {
+    name: "ポートフォリオ",
+    description:
+      "このプロジェクトでは、React.jsとTailwind CSSを使用してユーザーインターフェースを構築し、JavaScriptの3DライブラリであるThree.jsを使用して3D画像をレンダリングしました。シングルページのポートフォリオサイトを作成しました。",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "tailwindCss",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "threeJs",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: carrent,
+    source_code_link: "https://github.com/",
+  },
+  {
+    name: "スポティファイアプリ",
+    description:
+      "Spotifyに似た音楽ストリーミングウェブサイトを構築しました。クライアント側のユーザーインターフェースにはReactJsを使用し、サーバーサイドにはNodeJsを使用しています。また、データベースにはPostgreSQLを採用しています。",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "nodejs",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: carrent,
+    source_code_link: "https://github.com/",
+  },
+];
+export { services, technologies, experiences, testimonials, projects, hobbies };

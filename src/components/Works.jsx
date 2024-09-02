@@ -15,15 +15,7 @@ const enableBodyScroll = () => {
   document.body.style.overflow = "";
 };
 
-const ProjectCard = ({
-  index,
-  name,
-  company,
-  description,
-  tags,
-  image,
-  source_code_link,
-}) => {
+const ProjectCard = ({ index, name, company, description, image }) => {
   const [showModal, setShowModal] = useState(false);
   const handleOpenModal = () => setShowModal(true);
   const handleCloseModal = () => setShowModal(false);
@@ -55,18 +47,6 @@ const ProjectCard = ({
               alt={name}
               className="w-full h-full object-cover rounded-2xl"
             />
-            {/* <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
-            <div
-              onClick={() => window.open(source_code_link, "_blank")}
-              className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
-            >
-              <img
-                src={github}
-                alt="source code"
-                className="w-1/2 h-1/2 object-contain"
-              />
-            </div>
-          </div> */}
           </div>
           <div className="mt-5">
             <h3 className="text-white font-bold text-[24px]">{name}</h3>
@@ -77,18 +57,6 @@ const ProjectCard = ({
               {description}
             </p>
           </div>
-
-          {/* <div className="mt-4 flex flex-wrap gap-2">
-            {tags.map((tag) => (
-              <p
-                key={`${name}-${tag.name}`}
-                className={`text-[14px] ${tag.color}`}
-              >
-                #{tag.name}
-              </p>
-            ))}
-          </div> */}
-
           <div className="mt-4 flex  text-sky-400 cursor-pointer">
             <motion.div
               onClick={handleOpenModal}
@@ -111,20 +79,6 @@ const ProjectCard = ({
         description={description}
         company={company}
       />
-      {/* <div className="relative w-full h-[230px]">
-          <img
-            src={image}
-            alt={name}
-            className="w-full h-full object-cover rounded-2xl"
-          />
-    
-        </div>
-        <div className="mt-5">
-          <h3 className="text-white font-bold text-[24px]">{name}</h3>
-          <p className="mt-2 text-secondary text-[14px] line-clamp-3 ">
-            {description}
-          </p>
-        </div> */}
     </>
   );
 };
@@ -133,8 +87,8 @@ const Works = () => {
   return (
     <>
       <motion.div variants={textVariant()}>
-        <p className={`${styles.heroSubText}`}>勤務</p>
-        <h2 className={`${styles.heroHeadText}`}>プロジェクト</h2>
+        <p className={`${styles.sectionSubText}`}>勤務</p>
+        <h2 className={`${styles.sectionHeadText}`}>プロジェクト</h2>
       </motion.div>
       <div className="w-full flex">
         <motion.p

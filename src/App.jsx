@@ -8,6 +8,7 @@ import Contact from "./components/Contact";
 import { BrowserRouter } from "react-router-dom";
 import StartCanvas from "./components/canvas/Stars";
 import Works from "./components/Works";
+import Hobbies from "./components/Hobbies";
 
 const App = () => {
   return (
@@ -21,6 +22,7 @@ const App = () => {
         <Experience />
         <Tech />
         <Works />
+        <Hobbies />
         <Feedbacks />
         <div className="relative z-0">
           <Contact />
