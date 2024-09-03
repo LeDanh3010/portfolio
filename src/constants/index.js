@@ -142,9 +142,9 @@ const experiences = [
     link: "http://www.btech.com.vn/",
     points: [
       "会社所在:ベトナム",
-      "Orcad、CCSコンパイラ、およびProteusなどのソフトウェアを使用して、駐車システムと指紋認証、順番待ち受付のシステムの設計と開発を行う。",
-      "システム障害に関連する問題の管理と対策を行う。",
-      "顧客の要求に基づいて新しいシステムを開発する。",
+      "Orcad、CCSコンパイラ、およびProteusなどのソフトウェアを使用して、駐車システムと指紋認証、順番待ち受付のシステムの設計と開発を行います。",
+      "システム障害に関連する問題の管理と対策を行います。",
+      "顧客の要求に基づいて新しいシステムを開発します。",
     ],
   },
   {
@@ -169,7 +169,7 @@ const experiences = [
     link: "https://www.k-tokuden.co.jp/",
     points: [
       "会社所在:日本",
-      "ボビン製品の設計および図面作成をCadSuperやSolidWorksで行い、Ansysを用いて構造解析などの強度試験も担当します",
+      "ボビン製品の設計および図面作成をCadSuperやSolidWorksで行い、Ansysを用いて構造解析などの強度試験も担当します。",
       "ボビン金型の設計や回転溶着機用の治具設計します。",
     ],
   },
@@ -177,28 +177,19 @@ const experiences = [
 
 const testimonials = [
   {
-    testimonial:
-      "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
-    name: "Sara Lee",
-    designation: "CFO",
-    company: "Acme Co",
-    image: "https://randomuser.me/api/portraits/women/4.jpg",
+    title: "個人",
+    info1: "生年月日:4平成10月30日",
+    info2: "現住所:長野県上田市",
   },
   {
-    testimonial:
-      "I've never met a web developer who truly cares about their clients' success like Rick does.",
-    name: "Chris Brown",
-    designation: "COO",
-    company: "DEF Corp",
-    image: "https://randomuser.me/api/portraits/men/5.jpg",
+    title: "資格",
+    info1: "言語:日本語N2JLPT",
+    info2: "専攻:メカトロニクス学科",
   },
   {
-    testimonial:
-      "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-    name: "Lisa Wang",
-    designation: "CTO",
-    company: "456 Enterprises",
-    image: "https://randomuser.me/api/portraits/women/6.jpg",
+    title: "希望",
+    info1: "年収:430万円",
+    info2: "勤務地:日本であればどこでも可",
   },
 ];
 
@@ -283,7 +274,7 @@ const hobbies = [
       },
       {
         name: "tailwindCss",
-        color: "pink-text-gradient",
+        color: "green-text-gradient",
       },
       {
         name: "threeJs",
@@ -304,7 +295,7 @@ const hobbies = [
       },
       {
         name: "nodejs",
-        color: "pink-text-gradient",
+        color: "green-text-gradient",
       },
     ],
     image: carrent,

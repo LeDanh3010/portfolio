@@ -2,17 +2,6 @@ import { motion } from "framer-motion";
 import { styles } from "../styles";
 import ComputersCanvas from "./canvas/Computers";
 
-// const effectVariant = {
-//   hidden: {
-//     opacity: 0,
-//     y: "-20",
-//   },
-//   visible: {
-//     opacity: 1,
-//     y: 0,
-//   },
-// };
-
 const Hero = () => {
   return (
     <section className="relative w-full h-screen mx-auto">
