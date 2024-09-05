@@ -4,6 +4,8 @@ import { OverlayScrollbarsComponent } from "overlayscrollbars-react";
 import "overlayscrollbars/overlayscrollbars.css";
 import { AnimatePresence } from "framer-motion";
 import { backdropVariant, modalVariant } from "./motion";
+import { useRef } from "react";
+import videoFile from "../assets/video/mold.mp4";
 
 const Modal = ({
   name,
@@ -13,6 +15,7 @@ const Modal = ({
   showModal,
   company,
 }) => {
+  const videoRef = useRef(null);
   return (
     <AnimatePresence>
       {showModal && (
@@ -36,9 +39,14 @@ const Modal = ({
               className="flex relative w-full left-0 bottom-0 px-2 "
             >
               <div className="w-full md:h-[450px] h-[250px]">
-                <img
+                {/* <img
                   src={image}
                   alt={name}
+                  className="w-full h-full object-cover sm:rounded-2xl rounded-xl"
+                /> */}
+                <video
+                  src={videoFile}
+                  autoPlay="true"
                   className="w-full h-full object-cover sm:rounded-2xl rounded-xl"
                 />
               </div>

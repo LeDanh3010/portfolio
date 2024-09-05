@@ -35,6 +35,9 @@ import {
   cadmeisterImg,
   orcadImg,
   proteusImg,
+  seihin,
+  meisterWork,
+  catiaWork,
 } from "../assets";
 
 export const navLinks = [
@@ -195,26 +198,25 @@ const testimonials = [
 
 const projects = [
   {
-    name: "順番待ち受付システム",
-    company: "Btech 有限会社",
+    name: "ボビン製品設計",
+    company: "Tokuden 株式会社",
     description:
-      "自動順番待ちシステムの設計とプログラミングを従事し、このシステムは中央制御ユニットを中心に、タッチスクリーンのチケット発行ポイントやメインディスプレイボード、アンプとスピーカー、タッチセンサー式の呼び出しパネルなどが内部ネットワークを介して連携しています。また、オプションでGSMモデムによる通知機能や、顧客フィードバック用の評価キーボードも含まれます。これらのシステムの設計や開発には、ProteusやOrCADなどのソフトウェアを活用します。",
+      "CadSuperやSolidWorksのソフトでボビンの製品に関連する設計業務に従事し、製品の構造および硬度を解析するためにANSYSソフトウェアを使用して検証を行いました。また、顧客の要求に基づき、製品の改良にも積極的に取り組んできました。さらに、製品の金型設計にも携わり、製造プロセス全体の最適化を目指します。",
     tags: [
       {
-        name: "react",
+        name: "nextjs",
         color: "blue-text-gradient",
       },
       {
-        name: "mongodb",
+        name: "supabase",
         color: "green-text-gradient",
       },
       {
-        name: "tailwind",
+        name: "css",
         color: "pink-text-gradient",
       },
     ],
-    image: carrent,
-    source_code_link: "https://github.com/",
+    image: solidImg,
   },
   {
     name: "自動車部品金型",
@@ -235,30 +237,28 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: jobit,
-    source_code_link: "https://github.com/",
+    image: meisterWork,
   },
   {
-    name: "ボビン製品設計",
-    company: "Tokuden 株式会社",
+    name: "順番待ち受付システム",
+    company: "Btech 有限会社",
     description:
-      "CadSuperやSolidWorksのソフトでボビンの製品に関連する設計業務に従事し、製品の構造および硬度を解析するためにANSYSソフトウェアを使用して検証を行いました。また、顧客の要求に基づき、製品の改良にも積極的に取り組んできました。さらに、製品の金型設計にも携わり、製造プロセス全体の最適化を目指します。",
+      "自動順番待ちシステムの設計とプログラミングを従事し、このシステムは中央制御ユニットを中心に、タッチスクリーンのチケット発行ポイントやメインディスプレイボード、アンプとスピーカー、タッチセンサー式の呼び出しパネルなどが内部ネットワークを介して連携しています。また、オプションでGSMモデムによる通知機能や、顧客フィードバック用の評価キーボードも含まれます。これらのシステムの設計や開発には、ProteusやOrCADなどのソフトウェアを活用します。",
     tags: [
       {
-        name: "nextjs",
+        name: "react",
         color: "blue-text-gradient",
       },
       {
-        name: "supabase",
+        name: "mongodb",
         color: "green-text-gradient",
       },
       {
-        name: "css",
+        name: "tailwind",
         color: "pink-text-gradient",
       },
     ],
-    image: tripguide,
-    source_code_link: "https://github.com/",
+    image: carrent,
   },
 ];
 

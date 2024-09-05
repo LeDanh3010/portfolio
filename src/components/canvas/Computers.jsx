@@ -4,16 +4,17 @@ import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 import CanvasLoader from "../Loader";
 
 const Computers = ({ isMobile }) => {
-  const computer = useGLTF("./cyberpunk_car/scene.gltf");
+  const computer = useGLTF("./lancia_fulvia_rallye/scene.gltf");
   return (
     <mesh>
-      <hemisphereLight intensity={2} groundColor="black" />
-      <pointLight intensity={1} />
+      <hemisphereLight intensity={40} groundColor="blue" />
+      <pointLight intensity={40} />
+
       <primitive
         object={computer.scene}
-        scale={isMobile ? 0.7 : 0.03}
-        position={isMobile ? [0, -3, -2.2] : [1, -5.25, 0]}
-        rotation={[-0.05, -0.5, -0.1]}
+        scale={isMobile ? 4.8 : 6}
+        position={isMobile ? [1, -5.5, -2.2] : [1, -5.5, -2.3]}
+        rotation={[0, -16.1, 0.03]}
       />
     </mesh>
   );
@@ -47,7 +48,7 @@ const ComputersCanvas = () => {
       frameloop="demand"
       shadows
       dpr={[1, 2]}
-      camera={{ position: [20, 3, 5], fov: 1500 }}
+      camera={{ position: [15, -15, -5], fov: 800 }}
       gl={{ preserveDrawingBuffer: true }}
     >
       <Suspense fallback={<CanvasLoader />}>

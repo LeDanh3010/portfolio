@@ -21,6 +21,7 @@ const ServiceCard = ({ index, title, icon }) => {
             src={icon}
             alt="web-development"
             className="w-full h-full object-cover rounded-2xl"
+            loading="lazy"
           />
         </div>
         <div className="mt-5">

@@ -41,6 +41,9 @@ import planex from "./company/planex.png";
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
+import seihin from "./seihin.png";
+import meisterWork from "./meisterWork.png";
+import catiaWork from "./catiaWork.png";
 
 export {
   logo,
@@ -83,4 +86,7 @@ export {
   cadmeisterImg,
   orcadImg,
   proteusImg,
+  seihin,
+  meisterWork,
+  catiaWork,
 };
