@@ -1,27 +1,12 @@
 import {
-  mobile,
-  backend,
-  creator,
-  web,
   javascript,
-  typescript,
   html,
   css,
   reactjs,
   redux,
-  tailwind,
   nodejs,
   mongodb,
   git,
-  figma,
-  docker,
-  meta,
-  starbucks,
-  tesla,
-  shopify,
-  carrent,
-  jobit,
-  tripguide,
   threejs,
   btech,
   tokuden,
@@ -38,6 +23,13 @@ import {
   seihin,
   meisterWork,
   catiaWork,
+  queue,
+  queue2,
+  product,
+  product1,
+  jig,
+  projectIt,
+  projectItMusic,
 } from "../assets";
 
 export const navLinks = [
@@ -181,6 +173,7 @@ const experiences = [
 const testimonials = [
   {
     title: "個人",
+    info3: "名前:グエン レ ザイン",
     info1: "生年月日:4平成10月30日",
     info2: "現住所:長野県上田市",
   },
@@ -188,11 +181,13 @@ const testimonials = [
     title: "資格",
     info1: "言語:日本語N2JLPT",
     info2: "専攻:メカトロニクス学科",
+    info3: "",
   },
   {
     title: "希望",
     info1: "年収:430万円",
     info2: "勤務地:日本であればどこでも可",
+    info3: "",
   },
 ];
 
@@ -216,7 +211,8 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: solidImg,
+    poster: solidImg,
+    image: { solidImg, seihin },
   },
   {
     name: "自動車部品金型",
@@ -237,7 +233,8 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: meisterWork,
+    poster: meisterWork,
+    image: { meisterWork, catiaWork, product, product1, jig },
   },
   {
     name: "順番待ち受付システム",
@@ -258,7 +255,8 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: carrent,
+    poster: queue2,
+    image: { queue, queue2 },
   },
 ];
 
@@ -266,7 +264,7 @@ const hobbies = [
   {
     name: "ポートフォリオ",
     description:
-      "このプロジェクトでは、React.jsとTailwind CSSを使用してユーザーインターフェースを構築し、JavaScriptの3DライブラリであるThree.jsを使用して3D画像をレンダリングしました。シングルページのポートフォリオサイトを作成しました。",
+      "このプロジェクトでは、React.jsとTailwind CSSを使用してユーザーインターフェースを構築し、react three fiberというライブラリを使用して3D画像をレンダリングしました。シングルページのポートフォリオサイトを作成しました。",
     tags: [
       {
         name: "react",
@@ -281,8 +279,8 @@ const hobbies = [
         color: "pink-text-gradient",
       },
     ],
-    image: carrent,
-    source_code_link: "https://github.com/",
+    image: projectIt,
+    source_code_link: "https://github.com/LeDanh3010/portfolio",
   },
   {
     name: "スポティファイアプリ",
@@ -298,8 +296,8 @@ const hobbies = [
         color: "green-text-gradient",
       },
     ],
-    image: carrent,
-    source_code_link: "https://github.com/",
+    image: projectItMusic,
+    source_code_link: "https://github.com/LeDanh3010/music-app/tree/main/FE",
   },
 ];
 export { services, technologies, experiences, testimonials, projects, hobbies };

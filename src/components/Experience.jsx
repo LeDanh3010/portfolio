@@ -37,6 +37,7 @@ const ExperienceCard = ({ experience }) => {
             alt={experience.company_name}
             className="w-[60%] h-[60%] object-contain"
             onClick={handleClick}
+            loading="lazy"
           />
         </motion.div>
       }

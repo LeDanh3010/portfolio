@@ -44,6 +44,13 @@ import tripguide from "./tripguide.png";
 import seihin from "./seihin.png";
 import meisterWork from "./meisterWork.png";
 import catiaWork from "./catiaWork.png";
+import queue from "./queue.png";
+import queue2 from "./queue2.png";
+import product from "./product.png";
+import product1 from "./product1.png";
+import jig from "./jig.png";
+import projectIt from "./projectIt.png";
+import projectItMusic from "./projectItMusic.png";
 
 export {
   logo,
@@ -89,4 +96,11 @@ export {
   seihin,
   meisterWork,
   catiaWork,
+  queue,
+  queue2,
+  product,
+  product1,
+  jig,
+  projectIt,
+  projectItMusic,
 };

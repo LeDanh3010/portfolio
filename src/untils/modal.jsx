@@ -4,8 +4,8 @@ import { OverlayScrollbarsComponent } from "overlayscrollbars-react";
 import "overlayscrollbars/overlayscrollbars.css";
 import { AnimatePresence } from "framer-motion";
 import { backdropVariant, modalVariant } from "./motion";
-import { useRef } from "react";
-import videoFile from "../assets/video/mold.mp4";
+
+import SliderContent from "../sliderRender/SliderContent";
 
 const Modal = ({
   name,
@@ -15,7 +15,6 @@ const Modal = ({
   showModal,
   company,
 }) => {
-  const videoRef = useRef(null);
   return (
     <AnimatePresence>
       {showModal && (
@@ -36,20 +35,9 @@ const Modal = ({
           >
             <OverlayScrollbarsComponent
               options={{ scrollbars: { autoHide: "scroll" } }}
-              className="flex relative w-full left-0 bottom-0 px-2 "
+              className="flex relative w-full left-0 bottom-0 px-2 carousel-style"
             >
-              <div className="w-full md:h-[450px] h-[250px]">
-                {/* <img
-                  src={image}
-                  alt={name}
-                  className="w-full h-full object-cover sm:rounded-2xl rounded-xl"
-                /> */}
-                <video
-                  src={videoFile}
-                  autoPlay="true"
-                  className="w-full h-full object-cover sm:rounded-2xl rounded-xl"
-                />
-              </div>
+              {SliderContent(name, image)}
               <div className="w-full mt-3">
                 <h3 className="text-white font-bold sm:text-[24px] text-[20px]">
                   {name}

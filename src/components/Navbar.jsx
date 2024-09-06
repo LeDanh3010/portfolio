@@ -20,9 +20,14 @@ const Navbar = () => {
             window.scroll(0, 0);
           }}
         >
-          <img src={logo} alt="logo" className="w-11 h-9 object-contain" />
+          <img
+            src={logo}
+            alt="logo"
+            loading="lazy"
+            className="w-11 h-9 object-contain"
+          />
           <p className="text-white text-[18px] font-bold cursor-pointer flex">
-            <span className="sm:block hidden">履歴書</span>
+            <span className="sm:block hidden">ポートフォリオ</span>
           </p>
         </Link>
         <ul className="list-none hidden sm:flex flex-row gap-10">
@@ -42,6 +47,7 @@ const Navbar = () => {
           <img
             src={toggle ? close : menu}
             alt="menu"
+            loading="lazy"
             className="sm:w-[28px] sm:h-[28px] w-[23px] h-[23px] object-contain cursor-pointer"
             onClick={() => setToggle(!toggle)}
           />

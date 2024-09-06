@@ -12,6 +12,7 @@ const FeedbackCard = ({ index, info1, info2, info3, title }) => {
     >
       <p className="text-white font-black text-[24px]">{title}</p>
       <div className="mt-1">
+        <p className="text-white tracking-wider text-[18px]">{info3}</p>
         <p className="text-white tracking-wider text-[18px]">{info1}</p>
         <p className="text-white tracking-wider text-[18px]">{info2}</p>
       </div>

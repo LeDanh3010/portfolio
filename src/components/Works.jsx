@@ -15,7 +15,7 @@ const enableBodyScroll = () => {
   document.body.style.overflow = "";
 };
 
-const ProjectCard = ({ index, name, company, description, image }) => {
+const ProjectCard = ({ index, name, company, description, image, poster }) => {
   const [showModal, setShowModal] = useState(false);
   const handleOpenModal = () => setShowModal(true);
   const handleCloseModal = () => setShowModal(false);
@@ -43,9 +43,10 @@ const ProjectCard = ({ index, name, company, description, image }) => {
         >
           <div className="relative w-full h-[230px]">
             <img
-              src={image}
+              src={poster}
               alt={name}
               className="w-full h-full object-cover rounded-2xl"
+              loading="lazy"
             />
           </div>
           <div className="mt-5">
