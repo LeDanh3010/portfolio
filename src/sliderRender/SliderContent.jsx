@@ -1,6 +1,7 @@
 import videoFile1 from "../assets/video/mold.mp4";
 import videoFile2 from "../assets/video/seihin.mp4";
 import videoFile3 from "../assets/video/seihin1.mp4";
+import videoFile4 from "../assets/video/mold1.mp4";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
 
@@ -27,6 +28,14 @@ const SliderContent = (name, image) => {
           />
           <video
             src={videoFile1}
+            autoPlay
+            loop
+            muted
+            loading="lazy"
+            className="w-full h-full object-cover sm:rounded-2xl rounded-xl"
+          />
+          <video
+            src={videoFile4}
             autoPlay
             loop
             muted

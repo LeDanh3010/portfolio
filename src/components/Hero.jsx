@@ -10,7 +10,7 @@ const Hero = () => {
       >
         <div className="flex flex-col justify-center items-center mt-5">
           <div className="w-5 h-5 rounded-full bg-[#1c83e2]" />
-          <div className="w-1 sm:h-80 h-40 blue-gradient" />
+          <div className="w-1 sm:h-90 h-40 blue-gradient" />
         </div>
         <div>
           <motion.h1
@@ -44,7 +44,7 @@ const Hero = () => {
         </div>
       </div>
       <ComputersCanvas />
-      <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center">
+      <div className="absolute xs:bottom-2 bottom-32 w-full flex justify-center items-center">
         <a href="#about">
           <div className="'w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2">
             <motion.div
