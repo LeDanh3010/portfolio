@@ -41,6 +41,7 @@ import product1 from "./product1.png";
 import jig from "./jig.png";
 import projectIt from "./projectIt.png";
 import projectItMusic from "./projectItMusic.png";
+import brainwave from "./brainwave.png";
 
 export {
   logo,
@@ -82,4 +83,5 @@ export {
   jig,
   projectIt,
   projectItMusic,
+  brainwave,
 };

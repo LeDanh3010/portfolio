@@ -1,10 +1,10 @@
-import { Tilt } from "react-tilt";
 import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { github } from "../assets";
 import { SectionWrapper } from "../hoc";
 import { hobbies } from "../constants";
 import { fadeIn, textVariant } from "../untils/motion";
+import { useState } from "react";
 
 const HobbiesCard = ({
   index,
@@ -13,16 +13,18 @@ const HobbiesCard = ({
   tags,
   image,
   source_code_link,
+  link_live,
 }) => {
+  const [isShow, setIsShow] = useState(false);
   return (
     <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
-      <Tilt
+      <div
         options={{
           max: 45,
           scale: 1,
           speed: 450,
         }}
-        className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full"
+        className="relative bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full"
       >
         <div className="relative w-full h-[230px]">
           <img
@@ -49,20 +51,34 @@ const HobbiesCard = ({
 
         <div className="mt-5">
           <h3 className="text-white font-bold text-[24px]">{name}</h3>
-          <p className="mt-2 text-secondary text-[14px]">{description}</p>
+          {isShow ? (
+            <p className="mt-2 text-secondary text-[14px]  ">{description}</p>
+          ) : (
+            <p className="mt-2 text-secondary text-[14px] line-clamp-2 ">
+              {description}
+            </p>
+          )}
+
+          <span
+            className="text-[15px] blue-text-gradient font-semibold cursor-pointer"
+            onClick={() => setIsShow(!isShow)}
+          >
+            {isShow ? "Show less <<" : "Show more >>"}
+          </span>
         </div>
 
         <div className="mt-4 flex flex-wrap gap-2">
           {tags.map((tag) => (
             <p
               key={`${name}-${tag.name}`}
-              className={`text-[14px] ${tag.color}`}
+              className={`text-[16px] ${tag.color} cursor-pointer font-semibold`}
+              onClick={() => window.open(link_live, "_blank")}
             >
               #{tag.name}
             </p>
           ))}
         </div>
-      </Tilt>
+      </div>
     </motion.div>
   );
 };
@@ -71,7 +87,7 @@ const Hobbies = () => {
   return (
     <>
       <motion.div variants={textVariant()}>
-        <p className={`${styles.sectionSubText} `}>趣味</p>
+        <p className={`${styles.sectionSubText} `}>副業</p>
         <h2 className={`${styles.sectionHeadText}`}>個人プロジェクト</h2>
       </motion.div>
 
@@ -80,7 +96,9 @@ const Hobbies = () => {
           variants={fadeIn("", "", 0.1, 1)}
           className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]"
         >
-          私はJavaScript、C++といったプログラミング言語を使用することができ、ReactのようなJavaScriptライブラリやNode.jsのようなプラットフォームも扱えます。以下は、私の個人的なウェブ開発プロジェクトのいくつかです。各プロジェクトについて、コードリポジトリへのリンクとライブデモへのリンクとともに簡単に説明しています。
+          私はいくつかの個人プロジェクトとして、小さなウェブ開発を行っています。もし興味があれば、現在制作中または完成したウェブサイトをぜひご覧ください。GitHubへのリンクを貼ってあり、ソースコードも公開しています。これらのウェブサイトでは、フロントエンドにReact.jsというJavaScriptのライブラリを使用してユーザーインターフェースを作成し、CSSフレームワークにはTailwind
+          CSSやBootstrap
+          5を使っています。バックエンドにはNode.jsというプラットフォームを使用し、サーバーサイドを構築するためにExpressフレームワークを活用しています。
         </motion.p>
       </div>
 

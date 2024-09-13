@@ -30,6 +30,7 @@ import {
   jig,
   projectIt,
   projectItMusic,
+  brainwave,
 } from "../assets";
 
 export const navLinks = [
@@ -262,42 +263,46 @@ const projects = [
 
 const hobbies = [
   {
-    name: "ポートフォリオ",
+    name: "Brainwave",
     description:
-      "このプロジェクトでは、React.jsとTailwind CSSを使用してユーザーインターフェースを構築し、react three fiberというライブラリを使用して3D画像をレンダリングしました。シングルページのポートフォリオサイトを作成しました。",
+      "React.jsとTailwind CSSを使用して、パララックス効果と弁当箱レイアウトを持つモダンなウェブサイトを構築する。",
     tags: [
       {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "tailwindCss",
+        name: "Link Live",
         color: "green-text-gradient",
       },
-      {
-        name: "threeJs",
-        color: "pink-text-gradient",
-      },
     ],
-    image: projectIt,
+    image: brainwave,
     source_code_link: "https://github.com/LeDanh3010/portfolio",
+    link_live: "https://ledanh3010.github.io/BrainwaveApp/",
   },
   {
     name: "スポティファイアプリ",
     description:
-      "Spotifyに似た音楽ストリーミングウェブサイトを構築しました。クライアント側のユーザーインターフェースにはReactJsを使用し、サーバーサイドにはNodeJsを使用しています。また、データベースにはPostgreSQLを採用しています。",
+      "Spotifyに似た音楽アプリを構築しています。フロントエンドではReact.jsを使用し、Axiosパッケージを使ってブラウザからサーバーへAPIコールを行い、ユーザー認証にはJSON Web Tokenを使用しています。バックエンドではNode.jsプラットフォームを使ってサーバーサイドを構築し、データベースにはリレーショナルデータベースであるPostgreSQLを使用します。",
     tags: [
       {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "nodejs",
+        name: "Link Live",
         color: "green-text-gradient",
       },
     ],
     image: projectItMusic,
     source_code_link: "https://github.com/LeDanh3010/music-app/tree/main/FE",
+    link_live: "https://ledanh3010.github.io/BrainwaveApp/",
+  },
+  {
+    name: "ポートフォリオ",
+    description:
+      "React.jsとTailwind CSSを使用してユーザーインターフェースを構築し、react three fiberというライブラリを使用して3D画像をレンダリングしました。シングルページのポートフォリオサイトを作成します。",
+    tags: [
+      {
+        name: "Link Live",
+        color: "green-text-gradient",
+      },
+    ],
+    image: projectIt,
+    source_code_link: "https://github.com/LeDanh3010/portfolio",
+    link_live: "https://ledanh3010.github.io/BrainwaveApp/",
   },
 ];
 export { services, technologies, experiences, testimonials, projects, hobbies };
