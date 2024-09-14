@@ -26,6 +26,7 @@ const HobbiesCard = ({
         }}
         className="relative bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full"
       >
+        <span className="absolute overflow-hidden -z-50 inset-[-2px] rounded-2xl before:absolute before:top-[-50%] before:left-[-50%] before:right-[-50%] before:bottom-[-50%] before:bg-[conic-gradient(from_-30deg,transparent_5%,#00d4ff)] before:animate-spin-slow blur"></span>
         <div className="relative w-full h-[230px]">
           <img
             src={image}

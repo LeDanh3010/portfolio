@@ -2,77 +2,87 @@ import videoFile1 from "../assets/video/mold.mp4";
 import videoFile2 from "../assets/video/seihin.mp4";
 import videoFile3 from "../assets/video/seihin1.mp4";
 import videoFile4 from "../assets/video/mold1.mp4";
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
+import { useState } from "react";
+import { RotatingLines } from "react-loader-spinner";
 
-const SliderContent = (name, image) => {
+const SliderContent = ({ name, images }) => {
+  const videos = [videoFile2, videoFile3, videoFile4, videoFile1];
+  const [loadingStates, setLoadingStates] = useState(
+    new Array(videos.length).fill(true)
+  );
+
+  const handleVideoLoad = (index) => {
+    setLoadingStates((prevStates) => {
+      const newState = [...prevStates];
+      newState[index] = false;
+      return newState;
+    });
+  };
   switch (name) {
     case "ボビン製品設計":
       return (
         <Carousel showStatus={false} showThumbs={false}>
-          <video
-            src={videoFile2}
-            autoPlay
-            loop
-            muted
-            loading="lazy"
-            className="w-full h-full object-cover sm:rounded-2xl rounded-xl"
-          />
-          <video
-            src={videoFile3}
-            autoPlay
-            loop
-            muted
-            loading="lazy"
-            className="w-full h-full object-cover sm:rounded-2xl rounded-xl"
-          />
-          <video
-            src={videoFile1}
-            autoPlay
-            loop
-            muted
-            loading="lazy"
-            className="w-full h-full object-cover sm:rounded-2xl rounded-xl"
-          />
-          <video
-            src={videoFile4}
-            autoPlay
-            loop
-            muted
-            loading="lazy"
-            className="w-full h-full object-cover sm:rounded-2xl rounded-xl"
-          />
+          {videos.map((video, index) => (
+            <div key={index} className="relative">
+              {loadingStates[index] && (
+                <div className="absolute inset-0 flex items-center justify-center bg-transparent">
+                  <RotatingLines
+                    visible={true}
+                    height="96"
+                    width="96"
+                    strokeColor="#1c83e2"
+                    strokeWidth="5"
+                    animationDuration="0.75"
+                    ariaLabel="rotating-lines-loading"
+                  />
+                </div>
+              )}
+              <video
+                src={video}
+                autoPlay
+                loop
+                muted
+                loading="lazy"
+                className={`w-full h-full object-cover sm:rounded-2xl rounded-xl ${
+                  loadingStates[index] ? "opacity-0" : "opacity-100"
+                }`}
+                onLoadedData={() => handleVideoLoad(index)}
+              />
+            </div>
+          ))}
         </Carousel>
       );
     case "自動車部品金型":
       return (
         <Carousel showStatus={false} showThumbs={false}>
           <img
-            src={image.meisterWork}
+            src={images.meisterWork}
             alt={name}
             loading="lazy"
             className="w-full h-full object-cover sm:rounded-2xl rounded-xl"
           />
           <img
-            src={image.catiaWork}
+            src={images.catiaWork}
             alt={name}
             loading="lazy"
             className="w-full h-full object-cover sm:rounded-2xl rounded-xl"
           />
           <img
-            src={image.jig}
+            src={images.jig}
             alt={name}
             loading="lazy"
             className="w-full h-full object-cover sm:rounded-2xl rounded-xl"
           />
           <img
-            src={image.product}
+            src={images.product}
             alt={name}
             loading="lazy"
             className="w-full h-full object-cover sm:rounded-2xl rounded-xl"
           />
           <img
-            src={image.product1}
+            src={images.product1}
             alt={name}
             loading="lazy"
             className="w-full h-full object-cover sm:rounded-2xl rounded-xl"
@@ -83,13 +93,13 @@ const SliderContent = (name, image) => {
       return (
         <Carousel showStatus={false} showThumbs={false}>
           <img
-            src={image.queue2}
+            src={images.queue2}
             alt={name}
             className="w-full h-full object-cover sm:rounded-2xl rounded-xl"
             loading="lazy"
           />
           <img
-            src={image.queue}
+            src={images.queue}
             alt={name}
             className="w-full h-full object-cover sm:rounded-2xl rounded-xl"
             loading="lazy"

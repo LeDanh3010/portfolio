@@ -4,7 +4,6 @@ import { OverlayScrollbarsComponent } from "overlayscrollbars-react";
 import "overlayscrollbars/overlayscrollbars.css";
 import { AnimatePresence } from "framer-motion";
 import { backdropVariant, modalVariant } from "./motion";
-
 import SliderContent from "../sliderRender/SliderContent";
 
 const Modal = ({
@@ -37,7 +36,7 @@ const Modal = ({
               options={{ scrollbars: { autoHide: "scroll" } }}
               className="flex relative w-full left-0 bottom-0 px-2 carousel-style"
             >
-              {SliderContent(name, image)}
+              <SliderContent name={name} images={image} />
               <div className="w-full mt-3">
                 <h3 className="text-white font-bold sm:text-[24px] text-[20px]">
                   {name}
