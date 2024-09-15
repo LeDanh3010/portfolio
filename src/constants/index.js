@@ -182,11 +182,11 @@ const testimonials = [
     title: "資格",
     info1: "言語:日本語N2JLPT",
     info2: "専攻:メカトロニクス学科",
-    info3: "",
+    info3: "TOEIC 550",
   },
   {
     title: "希望",
-    info1: "年収:430万円",
+    info1: "年収:450万円",
     info2: "勤務地:日本であればどこでも可",
     info3: "",
   },
@@ -302,7 +302,7 @@ const hobbies = [
     ],
     image: projectIt,
     source_code_link: "https://github.com/LeDanh3010/portfolio",
-    link_live: "https://ledanh3010.github.io/BrainwaveApp/",
+    link_live: "https://danh.website/",
   },
 ];
 export { services, technologies, experiences, testimonials, projects, hobbies };

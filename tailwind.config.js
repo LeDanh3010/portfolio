@@ -22,7 +22,7 @@ module.exports = {
         "hero-pattern": "url('/src/assets/herobg.png')",
       },
       animation: {
-        "spin-slow": "spin 8s linear infinite",
+        "spin-slow": "spin 40s linear infinite",
       },
     },
   },
