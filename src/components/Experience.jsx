@@ -9,6 +9,7 @@ import { SectionWrapper } from "../hoc";
 import { textVariant } from "../untils/motion";
 import { motion } from "framer-motion";
 import { animationVariants } from "../untils/motion";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const ExperienceCard = ({ experience }) => {
   const handleClick = () => {
@@ -32,12 +33,11 @@ const ExperienceCard = ({ experience }) => {
           whileTap="clicked"
           onClick={handleClick}
         >
-          <img
+          <LazyLoadImage
             src={experience.icon}
             alt={experience.company_name}
             className="w-[60%] h-[60%] object-contain"
             onClick={handleClick}
-            loading="lazy"
           />
         </motion.div>
       }

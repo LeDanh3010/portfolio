@@ -6,6 +6,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 import { useState } from "react";
 import { RotatingLines } from "react-loader-spinner";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const SliderContent = ({ name, images }) => {
   const videos = [videoFile2, videoFile3, videoFile4, videoFile1];
@@ -57,34 +58,29 @@ const SliderContent = ({ name, images }) => {
     case "自動車部品金型":
       return (
         <Carousel showStatus={false} showThumbs={false}>
-          <img
+          <LazyLoadImage
             src={images.meisterWork}
             alt={name}
-            loading="lazy"
             className="w-full h-full object-cover sm:rounded-2xl rounded-xl"
           />
-          <img
+          <LazyLoadImage
             src={images.catiaWork}
             alt={name}
-            loading="lazy"
             className="w-full h-full object-cover sm:rounded-2xl rounded-xl"
           />
-          <img
+          <LazyLoadImage
             src={images.jig}
             alt={name}
-            loading="lazy"
             className="w-full h-full object-cover sm:rounded-2xl rounded-xl"
           />
-          <img
+          <LazyLoadImage
             src={images.product}
             alt={name}
-            loading="lazy"
             className="w-full h-full object-cover sm:rounded-2xl rounded-xl"
           />
-          <img
+          <LazyLoadImage
             src={images.product1}
             alt={name}
-            loading="lazy"
             className="w-full h-full object-cover sm:rounded-2xl rounded-xl"
           />
         </Carousel>
@@ -92,17 +88,15 @@ const SliderContent = ({ name, images }) => {
     case "順番待ち受付システム":
       return (
         <Carousel showStatus={false} showThumbs={false}>
-          <img
+          <LazyLoadImage
             src={images.queue2}
             alt={name}
             className="w-full h-full object-cover sm:rounded-2xl rounded-xl"
-            loading="lazy"
           />
-          <img
+          <LazyLoadImage
             src={images.queue}
             alt={name}
             className="w-full h-full object-cover sm:rounded-2xl rounded-xl"
-            loading="lazy"
           />
         </Carousel>
       );

@@ -5,6 +5,7 @@ import { SectionWrapper } from "../hoc";
 import { EarthCanvas } from "./canvas";
 import emailjs from "@emailjs/browser";
 import { slideIn } from "../untils/motion";
+import BtnBackTop from "./btnBackToTop/BtnBackTop";
 
 const Contact = () => {
   const formRef = useRef();
@@ -105,6 +106,7 @@ const Contact = () => {
       >
         <EarthCanvas />
       </motion.div>
+      <BtnBackTop />
     </div>
   );
 };

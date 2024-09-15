@@ -186,7 +186,7 @@ const testimonials = [
   },
   {
     title: "希望",
-    info1: "年収:450万円",
+    info1: "年収:480万円",
     info2: "勤務地:日本であればどこでも可",
     info3: "",
   },
@@ -273,7 +273,7 @@ const hobbies = [
       },
     ],
     image: brainwave,
-    source_code_link: "https://github.com/LeDanh3010/portfolio",
+    source_code_link: "https://github.com/LeDanh3010/BrainwaveApp",
     link_live: "https://ledanh3010.github.io/BrainwaveApp/",
   },
   {
@@ -287,7 +287,7 @@ const hobbies = [
       },
     ],
     image: projectItMusic,
-    source_code_link: "https://github.com/LeDanh3010/music-app/tree/main/FE",
+    source_code_link: "https://github.com/LeDanh3010/music-app",
     link_live: "https://music-nguyenledanh-com.preview-domain.com/",
   },
   {

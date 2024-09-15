@@ -4,6 +4,7 @@ import { styles } from "../styles";
 import { services } from "../constants";
 import { fadeIn, textVariant } from "../untils/motion";
 import { SectionWrapper } from "../hoc/index";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const ServiceCard = ({ index, title, icon }) => {
   return (
@@ -20,11 +21,10 @@ const ServiceCard = ({ index, title, icon }) => {
         className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full"
       >
         <div className=" w-full h-[230px]">
-          <img
+          <LazyLoadImage
             src={icon}
             alt="web-development"
             className="w-full h-full object-cover rounded-2xl"
-            loading="lazy"
           />
         </div>
         <div className="mt-5">

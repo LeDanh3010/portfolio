@@ -6,6 +6,7 @@ import { fadeIn, textHoverVariant, textVariant } from "../untils/motion";
 import { projects } from "../constants";
 import { MdKeyboardDoubleArrowRight } from "react-icons/md";
 import Modal from "../untils/modal";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const disableBodyScroll = () => {
   document.body.style.overflow = "hidden";
@@ -43,11 +44,10 @@ const ProjectCard = ({ index, name, company, description, image, poster }) => {
           className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full"
         >
           <div className="relative w-full h-[230px]">
-            <img
+            <LazyLoadImage
               src={poster}
               alt={name}
               className="w-full h-full object-cover rounded-2xl"
-              loading="lazy"
             />
           </div>
           <div className="mt-5">

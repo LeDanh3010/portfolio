@@ -5,6 +5,7 @@ import { SectionWrapper } from "../hoc";
 import { hobbies } from "../constants";
 import { fadeIn, textVariant } from "../untils/motion";
 import { useState } from "react";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const HobbiesCard = ({
   index,
@@ -28,10 +29,9 @@ const HobbiesCard = ({
       >
         <span className="absolute shadow-card overflow-hidden -z-50 inset-[-2px] rounded-2xl before:absolute before:top-[-50%] before:left-[-50%] before:right-[-50%] before:bottom-[-50%] before:bg-[conic-gradient(from_-30deg,#4a437d,#9b8cff)] before:animate-spin-slow blur"></span>
         <div className="relative w-full h-[230px]">
-          <img
+          <LazyLoadImage
             src={image}
             alt="project_image"
-            loading="lazy"
             className="w-full h-full object-cover rounded-2xl"
           />
 
@@ -40,11 +40,10 @@ const HobbiesCard = ({
               onClick={() => window.open(source_code_link, "_blank")}
               className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
             >
-              <img
+              <LazyLoadImage
                 src={github}
                 alt="source code"
                 className="w-1/2 h-1/2 object-contain"
-                loading="lazy"
               />
             </div>
           </div>

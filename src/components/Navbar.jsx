@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { styles } from "../styles";
 import { logo, menu, close } from "../assets";
 import { navLinks } from "../constants";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const Navbar = () => {
   const [active, setActive] = useState("");
@@ -20,10 +21,9 @@ const Navbar = () => {
             window.scroll(0, 0);
           }}
         >
-          <img
+          <LazyLoadImage
             src={logo}
             alt="logo"
-            loading="lazy"
             className="w-11 h-9 object-contain"
           />
           <p className="text-white text-[18px] font-bold cursor-pointer flex">
@@ -44,10 +44,9 @@ const Navbar = () => {
           ))}
         </ul>
         <div className="sm:hidden flex flex-1 justify-end items-center">
-          <img
+          <LazyLoadImage
             src={toggle ? close : menu}
             alt="menu"
-            loading="lazy"
             className="sm:w-[28px] sm:h-[28px] w-[23px] h-[23px] object-contain cursor-pointer"
             onClick={() => setToggle(!toggle)}
           />
