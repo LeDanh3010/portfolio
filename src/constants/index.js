@@ -288,7 +288,7 @@ const hobbies = [
     ],
     image: projectItMusic,
     source_code_link: "https://github.com/LeDanh3010/music-app/tree/main/FE",
-    link_live: "https://ledanh3010.github.io/BrainwaveApp/",
+    link_live: "https://music-nguyenledanh-com.preview-domain.com/",
   },
   {
     name: "ポートフォリオ",
