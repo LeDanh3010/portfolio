@@ -182,11 +182,11 @@ const testimonials = [
     title: "資格",
     info1: "言語:日本語N2JLPT",
     info2: "専攻:メカトロニクス学科",
-    info3: "TOEIC 550",
+    info3: "",
   },
   {
     title: "希望",
-    info1: "年収:480万円",
+    info1: "年収:460 ~ 500万円",
     info2: "勤務地:日本であればどこでも可",
     info3: "",
   },
