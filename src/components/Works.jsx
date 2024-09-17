@@ -7,27 +7,18 @@ import { projects } from "../constants";
 import { MdKeyboardDoubleArrowRight } from "react-icons/md";
 import Modal from "../untils/modal";
 import { LazyLoadImage } from "react-lazy-load-image-component";
-
-const disableBodyScroll = () => {
-  document.body.style.overflow = "hidden";
-};
-
-const enableBodyScroll = () => {
-  document.body.style.overflow = "";
-};
+import { AnimatePresence } from "framer-motion";
+import { disablePageScroll, enablePageScroll } from "scroll-lock";
 
 const ProjectCard = ({ index, name, company, description, image, poster }) => {
   const [showModal, setShowModal] = useState(false);
   const handleOpenModal = () => setShowModal(true);
   const handleCloseModal = () => setShowModal(false);
-  useEffect(() => {
-    if (showModal) {
-      disableBodyScroll();
-    } else {
-      enableBodyScroll();
-    }
-    return () => enableBodyScroll();
-  }, [showModal]);
+  if (showModal) {
+    disablePageScroll();
+  } else {
+    enablePageScroll();
+  }
   return (
     <>
       <motion.div
@@ -73,14 +64,17 @@ const ProjectCard = ({ index, name, company, description, image, poster }) => {
           </div>
         </motion.div>
       </motion.div>
-      <Modal
-        handleCloseModal={handleCloseModal}
-        showModal={showModal}
-        name={name}
-        image={image}
-        description={description}
-        company={company}
-      />
+      <AnimatePresence>
+        {showModal && (
+          <Modal
+            handleCloseModal={handleCloseModal}
+            name={name}
+            image={image}
+            description={description}
+            company={company}
+          />
+        )}
+      </AnimatePresence>
     </>
   );
 };

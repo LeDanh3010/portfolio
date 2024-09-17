@@ -2,7 +2,6 @@ import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { OverlayScrollbarsComponent } from "overlayscrollbars-react";
 import "overlayscrollbars/overlayscrollbars.css";
-import { AnimatePresence } from "framer-motion";
 import { backdropVariant, modalVariant } from "./motion";
 import SliderContent from "../sliderRender/SliderContent";
 
@@ -11,27 +10,41 @@ const Modal = ({
   image,
   handleCloseModal,
   description,
-  showModal,
   company,
+  content,
 }) => {
   return (
-    <AnimatePresence>
-      {showModal && (
-        <motion.div
-          className="flex justify-center items-center fixed inset-0 sm:p-16 py-16 bg-black bg-opacity-50 z-50 "
-          variants={backdropVariant}
-          initial="hidden"
-          animate="visible"
-          onClick={handleCloseModal}
-        >
-          <motion.div
-            className={`${styles.padding} flex max-w-6xl bg-tertiary sm:max-h-[720px] max-h-[620px] sm:rounded-2xl rounded-xl relative bottom-0 top-0`}
-            onClick={(e) => e.stopPropagation()}
-            variants={modalVariant}
-            initial="hidden"
-            animate="visible"
-            exit="exit"
-          >
+    <motion.div
+      className="flex justify-center items-center fixed inset-0 sm:p-16 py-16 bg-black bg-opacity-50 z-50 "
+      variants={backdropVariant}
+      initial="hidden"
+      animate="visible"
+      onClick={handleCloseModal}
+    >
+      <motion.div
+        className={`${
+          styles.padding
+        } flex max-w-6xl bg-tertiary sm:max-h-[720px] max-h-[620px] sm:rounded-2xl rounded-xl relative bottom-0 top-0 ${
+          content && "flex-col gap-2"
+        }`}
+        onClick={(e) => e.stopPropagation()}
+        variants={modalVariant}
+        initial="hidden"
+        animate="visible"
+        exit="exit"
+      >
+        {content ? (
+          <>
+            <p className="text-white font-medium">{content}</p>
+            <button
+              className="font-semibold w-fit h-fit mt-4 ml-auto px-4 py-2 text-white bg-blue-500 rounded hover:bg-blue-700"
+              onClick={handleCloseModal}
+            >
+              Close
+            </button>
+          </>
+        ) : (
+          <>
             <OverlayScrollbarsComponent
               options={{ scrollbars: { autoHide: "scroll" } }}
               className="flex relative w-full left-0 bottom-0 px-2 carousel-style"
@@ -55,10 +68,10 @@ const Modal = ({
             >
               &times;
             </button>
-          </motion.div>
-        </motion.div>
-      )}
-    </AnimatePresence>
+          </>
+        )}
+      </motion.div>
+    </motion.div>
   );
 };
 

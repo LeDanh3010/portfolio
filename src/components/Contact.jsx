@@ -6,6 +6,9 @@ import { EarthCanvas } from "./canvas";
 import emailjs from "@emailjs/browser";
 import { slideIn } from "../untils/motion";
 import BtnBackTop from "./btnBackToTop/BtnBackTop";
+import Modal from "../untils/modal";
+import { disablePageScroll, enablePageScroll } from "scroll-lock";
+import { AnimatePresence } from "framer-motion";
 
 const Contact = () => {
   const formRef = useRef();
@@ -14,7 +17,15 @@ const Contact = () => {
     email: "",
     message: "",
   });
+
   const [loading, setLoading] = useState(false);
+  const [showModal, setShowModal] = useState(false);
+  if (showModal) {
+    disablePageScroll();
+  } else {
+    enablePageScroll();
+  }
+  const handleCloseModal = () => setShowModal(false);
   const handleSubmit = (e) => {
     e.preventDefault();
     setLoading(true);
@@ -32,7 +43,8 @@ const Contact = () => {
       )
       .then(() => {
         setLoading(false);
-        alert("Thank you.I will get back to you as soon as possible");
+        // alert("Thank you.I will get back to you as soon as possible");
+        setShowModal(true);
         setForm({
           name: "",
           email: "",
@@ -107,6 +119,14 @@ const Contact = () => {
         <EarthCanvas />
       </motion.div>
       <BtnBackTop />
+      <AnimatePresence>
+        {showModal && (
+          <Modal
+            content="ありがとうございます。できるだけ早くお返事いたします。🙂"
+            handleCloseModal={handleCloseModal}
+          />
+        )}
+      </AnimatePresence>
     </div>
   );
 };

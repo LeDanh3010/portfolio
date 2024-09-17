@@ -12,24 +12,26 @@ import Hobbies from "./components/Hobbies";
 
 const App = () => {
   return (
-    <BrowserRouter>
-      <div className="relative z-0 bg-primary">
-        <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
-          <Navbar />
-          <Hero />
+    <>
+      <BrowserRouter>
+        <div className="relative z-0 bg-primary">
+          <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
+            <Navbar />
+            <Hero />
+          </div>
+          <About />
+          <Experience />
+          <Tech />
+          <Works />
+          <Hobbies />
+          <Feedbacks />
+          <div className="relative z-0">
+            <Contact />
+            <StartCanvas />
+          </div>
         </div>
-        <About />
-        <Experience />
-        <Tech />
-        <Works />
-        <Hobbies />
-        <Feedbacks />
-        <div className="relative z-0">
-          <Contact />
-          <StartCanvas />
-        </div>
-      </div>
-    </BrowserRouter>
+      </BrowserRouter>
+    </>
   );
 };
 
