@@ -7,9 +7,10 @@ import { Carousel } from "react-responsive-carousel";
 import { useState } from "react";
 import { RotatingLines } from "react-loader-spinner";
 import { LazyLoadImage } from "react-lazy-load-image-component";
+import "./SliderContent.css";
 
 const SliderContent = ({ name, images }) => {
-  const videos = [videoFile2, videoFile3, videoFile4, videoFile1];
+  const videos = [videoFile1, videoFile4, videoFile3, videoFile2];
   const [loadingStates, setLoadingStates] = useState(
     new Array(videos.length).fill(true)
   );
@@ -24,7 +25,7 @@ const SliderContent = ({ name, images }) => {
   switch (name) {
     case "ボビン製品設計":
       return (
-        <Carousel showStatus={false} showThumbs={false}>
+        <Carousel showStatus={false} showThumbs={false} showArrows={true}>
           {videos.map((video, index) => (
             <div key={index} className="relative">
               {loadingStates[index] && (

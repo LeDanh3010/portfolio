@@ -1,0 +1,5 @@
+.carousel.carousel-slider {
+  height: auto;
+  border-radius: 16px;
+  aspect-ratio: 2 / 1;
+}

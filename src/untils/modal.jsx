@@ -15,7 +15,7 @@ const Modal = ({
 }) => {
   return (
     <motion.div
-      className="flex justify-center items-center fixed inset-0 sm:p-16 py-16 bg-black bg-opacity-50 z-50 "
+      className="flex justify-center items-center fixed inset-0 sm:px-16 sm:py-0 py-16 bg-black bg-opacity-50 z-50 "
       variants={backdropVariant}
       initial="hidden"
       animate="visible"
@@ -24,7 +24,7 @@ const Modal = ({
       <motion.div
         className={`${
           styles.padding
-        } flex max-w-6xl bg-tertiary sm:max-h-[720px] max-h-[620px] sm:rounded-2xl rounded-xl relative bottom-0 top-0 ${
+        } flex max-w-6xl bg-tertiary sm:max-h-[720px] max-h-[620px] sm:rounded-2xl rounded-xl relative w-full h-full ${
           content && "flex-col gap-2"
         }`}
         onClick={(e) => e.stopPropagation()}
