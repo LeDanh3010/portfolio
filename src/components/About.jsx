@@ -1,5 +1,5 @@
 import { Tilt } from "react-tilt";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { styles } from "../styles";
 import { services } from "../constants";
 import { fadeIn, textVariant } from "../untils/motion";
@@ -8,7 +8,7 @@ import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const ServiceCard = ({ index, title, icon }) => {
   return (
-    <motion.div
+    <m.div
       variants={fadeIn("right", "spring", index * 0.5, 0.75)}
       className="relative"
     >
@@ -31,23 +31,23 @@ const ServiceCard = ({ index, title, icon }) => {
           <h3 className="text-white font-bold text-[24px]">{title}</h3>
         </div>
       </Tilt>
-    </motion.div>
+    </m.div>
   );
 };
 
 const About = () => {
   return (
     <>
-      <motion.div variants={textVariant()}>
+      <m.div variants={textVariant()}>
         <p className={styles.sectionSubText}>自己紹介</p>
         <h2 className={styles.sectionHeadText}>概要</h2>
-      </motion.div>
-      <motion.p
+      </m.div>
+      <m.p
         variants={fadeIn("", "", 0.1, 1)}
         className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
       >
         私はベトナムのニャチャン市出身で、日本に住んで働いて約4年になります。主な仕事は、SolidWorks、CATIA、Cadmeisterなどの3Dおよび2Dデザインソフトを使用して、プラスチック製品、治具、射出成形金型に関連する図面を作成することです。また、Ansysなどの解析ソフトを使用して、プラスチック製品の構造や硬度を解析しています。
-      </motion.p>
+      </m.p>
       <div className="mt-20 flex flex-wrap gap-7">
         {services.map((service, index) => (
           <ServiceCard key={service.title} index={index} {...service} />

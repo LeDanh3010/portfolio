@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { styles } from "../styles";
 import { OverlayScrollbarsComponent } from "overlayscrollbars-react";
 import "overlayscrollbars/overlayscrollbars.css";
@@ -14,18 +14,18 @@ const Modal = ({
   content,
 }) => {
   return (
-    <motion.div
+    <m.div
       className="flex justify-center items-center fixed inset-0 sm:px-16 sm:py-0 py-16 bg-black bg-opacity-50 z-50 "
       variants={backdropVariant}
       initial="hidden"
       animate="visible"
       onClick={handleCloseModal}
     >
-      <motion.div
+      <m.div
         className={`${
           styles.padding
-        } flex max-w-6xl bg-tertiary sm:max-h-[720px] max-h-[620px] sm:rounded-2xl rounded-xl relative w-full h-full ${
-          content && "flex-col gap-2"
+        } flex max-w-6xl bg-tertiary sm:max-h-[720px] max-h-[620px] sm:rounded-2xl rounded-xl relative  ${
+          content ? "flex-col gap-2" : "w-full h-full"
         }`}
         onClick={(e) => e.stopPropagation()}
         variants={modalVariant}
@@ -70,8 +70,8 @@ const Modal = ({
             </button>
           </>
         )}
-      </motion.div>
-    </motion.div>
+      </m.div>
+    </m.div>
   );
 };
 

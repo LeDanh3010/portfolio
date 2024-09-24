@@ -7,7 +7,7 @@ import { styles } from "../styles";
 import { experiences } from "../constants";
 import { SectionWrapper } from "../hoc";
 import { textVariant } from "../untils/motion";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { animationVariants } from "../untils/motion";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 
@@ -25,7 +25,7 @@ const ExperienceCard = ({ experience }) => {
       date={experience.date}
       iconStyle={{ background: experience.iconBg }}
       icon={
-        <motion.div
+        <m.div
           className="flex justify-center items-center w-full h-full cursor-pointer"
           variants={animationVariants}
           initial="initial"
@@ -39,7 +39,7 @@ const ExperienceCard = ({ experience }) => {
             className="w-[60%] h-[60%] object-contain"
             onClick={handleClick}
           />
-        </motion.div>
+        </m.div>
       }
     >
       <div>
@@ -71,12 +71,12 @@ const ExperienceCard = ({ experience }) => {
 const Experience = () => {
   return (
     <>
-      <motion.div variants={textVariant()}>
+      <m.div variants={textVariant()}>
         <p className={`${styles.sectionSubText} text-center`}>
           これまでにやってきたこと
         </p>
         <h2 className={`${styles.sectionHeadText} text-center`}>職歴</h2>
-      </motion.div>
+      </m.div>
 
       <div className="mt-20 flex flex-col">
         <VerticalTimeline>

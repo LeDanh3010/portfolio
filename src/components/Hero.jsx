@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { styles } from "../styles";
 import ComputersCanvas from "./canvas/Computers";
 
@@ -13,7 +13,7 @@ const Hero = () => {
           <div className="w-1 sm:h-90 h-40 blue-gradient" />
         </div>
         <div>
-          <motion.h1
+          <m.h1
             className={`${styles.heroHeadText} text-white`}
             initial={{ opacity: 0, y: -50 }}
             animate={{ opacity: 1, y: 0 }}
@@ -26,8 +26,8 @@ const Hero = () => {
           >
             こんにちは。
             <span className="text-[#1c83e2]">ザインと申します。</span>
-          </motion.h1>
-          <motion.p
+          </m.h1>
+          <m.p
             className={`${styles.heroSubText} mt-2 text-white-100`}
             initial={{ opacity: 0, y: -50 }}
             animate={{ opacity: 1, y: 0 }}
@@ -40,14 +40,14 @@ const Hero = () => {
           >
             私は射出金型および <br className="sm:block hidden" />
             樹脂製品の設計をしております。
-          </motion.p>
+          </m.p>
         </div>
       </div>
       <ComputersCanvas />
       <div className="absolute xs:bottom-2 bottom-32 w-full flex justify-center items-center">
         <a href="#about">
           <div className="'w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2">
-            <motion.div
+            <m.div
               animate={{
                 y: [0, 24, 0],
               }}

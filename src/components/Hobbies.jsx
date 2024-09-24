@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { styles } from "../styles";
 import { github } from "../assets";
 import { SectionWrapper } from "../hoc";
@@ -18,7 +18,7 @@ const HobbiesCard = ({
 }) => {
   const [isShow, setIsShow] = useState(false);
   return (
-    <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
+    <m.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
       <div
         options={{
           max: 45,
@@ -79,27 +79,27 @@ const HobbiesCard = ({
           ))}
         </div>
       </div>
-    </motion.div>
+    </m.div>
   );
 };
 
 const Hobbies = () => {
   return (
     <>
-      <motion.div variants={textVariant()}>
-        <p className={`${styles.sectionSubText} `}>副業</p>
+      <m.div variants={textVariant()}>
+        <p className={`${styles.sectionSubText} `}>趣味</p>
         <h2 className={`${styles.sectionHeadText}`}>個人プロジェクト</h2>
-      </motion.div>
+      </m.div>
 
       <div className="w-full flex">
-        <motion.p
+        <m.p
           variants={fadeIn("", "", 0.1, 1)}
           className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]"
         >
           私はいくつかの個人プロジェクトとして、小さなウェブ開発を行っています。もし興味があれば、現在制作中または完成したウェブサイトをぜひご覧ください。GitHubへのリンクを貼ってあり、ソースコードも公開しています。これらのウェブサイトでは、フロントエンドにReact.jsというJavaScriptのライブラリを使用してユーザーインターフェースを作成し、CSSフレームワークにはTailwind
           CSSやBootstrap
           5を使っています。バックエンドにはNode.jsというプラットフォームを使用し、サーバーサイドを構築するためにExpressフレームワークを活用しています。
-        </motion.p>
+        </m.p>
       </div>
 
       <div className="mt-20 flex flex-wrap gap-7">

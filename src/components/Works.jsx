@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { styles } from "../styles";
 import { SectionWrapper } from "../hoc";
 import { fadeIn, textHoverVariant, textVariant } from "../untils/motion";
@@ -21,12 +21,12 @@ const ProjectCard = ({ index, name, company, description, image, poster }) => {
   }
   return (
     <>
-      <motion.div
+      <m.div
         variants={fadeIn("up", "spring", index * 0.5, 0.75)}
         className="relative "
       >
         <span className="absolute shadow-card overflow-hidden -z-50 inset-[-2px] rounded-2xl before:absolute before:top-[-50%] before:left-[-50%] before:right-[-50%] before:bottom-[-50%] before:bg-[conic-gradient(from_-30deg,#4a437d,#9b8cff)] before:animate-spin-slow blur"></span>
-        <motion.div
+        <m.div
           options={{
             max: 45,
             scale: 1,
@@ -51,7 +51,7 @@ const ProjectCard = ({ index, name, company, description, image, poster }) => {
             </p>
           </div>
           <div className="mt-4 flex  text-sky-400 cursor-pointer">
-            <motion.div
+            <m.div
               onClick={handleOpenModal}
               variants={textHoverVariant}
               whileHover="hover"
@@ -60,10 +60,10 @@ const ProjectCard = ({ index, name, company, description, image, poster }) => {
             >
               <span className="font-medium">詳細</span>
               <MdKeyboardDoubleArrowRight className="text-[20px]" />
-            </motion.div>
+            </m.div>
           </div>
-        </motion.div>
-      </motion.div>
+        </m.div>
+      </m.div>
       <AnimatePresence>
         {showModal && (
           <Modal
@@ -82,17 +82,17 @@ const ProjectCard = ({ index, name, company, description, image, poster }) => {
 const Works = () => {
   return (
     <>
-      <motion.div variants={textVariant()}>
+      <m.div variants={textVariant()}>
         <p className={`${styles.sectionSubText}`}>勤務</p>
         <h2 className={`${styles.sectionHeadText}`}>プロジェクト</h2>
-      </motion.div>
+      </m.div>
       <div className="w-full flex">
-        <motion.p
+        <m.p
           variants={fadeIn("", "", 0.1, 1)}
           className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]"
         >
           以下のいくつかのプロジェクトでは、私のスキルと経験を実際の仕事の例を通じて示し、これまでに行ったことを簡潔に説明します。
-        </motion.p>
+        </m.p>
       </div>
       <div className="mt-20 flex flex-wrap gap-7">
         {projects.map((project, index) => (

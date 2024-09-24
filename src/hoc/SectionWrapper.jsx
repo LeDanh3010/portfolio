@@ -1,11 +1,11 @@
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { styles } from "../styles";
 import { staggerContainer } from "../untils/motion";
 
 const SectionWrapper = (Component, idName) =>
   function HOC() {
     return (
-      <motion.section
+      <m.section
         variants={staggerContainer()}
         initial="hidden"
         whileInView="show"
@@ -16,7 +16,7 @@ const SectionWrapper = (Component, idName) =>
           &nbsp;
         </span>
         <Component />
-      </motion.section>
+      </m.section>
     );
   };
 export default SectionWrapper;
