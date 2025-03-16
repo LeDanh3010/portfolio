@@ -30,6 +30,7 @@ import threejs from "./tech/threejs.svg";
 import btech from "./company/btech.png";
 import tokuden from "./company/tokuden.png";
 import planex from "./company/planex.png";
+import aspark from "./company/aspark.png";
 
 import seihin from "./seihin.png";
 import meisterWork from "./meisterWork.png";
@@ -84,4 +85,5 @@ export {
   projectIt,
   projectItMusic,
   brainwave,
+  aspark,
 };

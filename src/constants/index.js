@@ -31,6 +31,7 @@ import {
   projectIt,
   projectItMusic,
   brainwave,
+  aspark,
 } from "../assets";
 
 export const navLinks = [
@@ -161,13 +162,25 @@ const experiences = [
     company_name: "Tokuden 株式会社",
     icon: tokuden,
     iconBg: "#383E56",
-    date: "2023年 7月 - 現在",
+    date: "2023年 4月 - 2024年 10月",
     link: "https://www.k-tokuden.co.jp/",
     points: [
       "会社所在:日本",
       "ボビン製品の設計および図面作成をCadSuperやSolidWorksで行い、Ansysを用いて構造解析などの強度試験も担当します。",
       "ボビン金型の設計や回転溶着機用の治具設計します。",
       "サンプル試作、実験・評価、データ収集および分析も可能です,。また、Excelを使用して、評価実験データのレポート作成および提出も行っています。",
+    ],
+  },
+  {
+    title: "カメラ部品治具設計",
+    company_name: "アスパーク 株式会社",
+    icon: aspark,
+    iconBg: "#383E56",
+    date: "2023年 11月 - 2024年 10月",
+    link: "https://www.aspark.co.jp/",
+    points: [
+      "会社所在:日本",
+      "カメラ部品治具の設計および図面作成をSolidWorksで行い、3D測定機で製品の測定も担当します。",
     ],
   },
 ];
@@ -177,7 +190,7 @@ const testimonials = [
     title: "個人",
     info3: "名前:グエン レ ザイン",
     info1: "生年月日:4平成10月30日",
-    info2: "現住所:長野県上田市",
+    info2: "現住所:山形県米沢市",
   },
   {
     title: "資格",
@@ -289,7 +302,7 @@ const hobbies = [
     ],
     image: projectItMusic,
     source_code_link: "https://github.com/LeDanh3010/music-app",
-    link_live: "https://music-nguyenledanh-com.preview-domain.com/",
+    link_live: "https://ledanh3010.github.io/Music-ui/",
   },
   {
     name: "ポートフォリオ",
