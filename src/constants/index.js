@@ -176,7 +176,7 @@ const experiences = [
     company_name: "アスパーク 株式会社",
     icon: aspark,
     iconBg: "#383E56",
-    date: "2023年 11月 - 2024年 10月",
+    date: "2023年 11月 - 現在",
     link: "https://www.aspark.co.jp/",
     points: [
       "会社所在:日本",
@@ -316,7 +316,7 @@ const hobbies = [
     ],
     image: projectIt,
     source_code_link: "https://github.com/LeDanh3010/portfolio",
-    link_live: "https://danh.website/",
+    link_live: "https://ledanh3010.github.io/portfolio/",
   },
 ];
 export { services, technologies, experiences, testimonials, projects, hobbies };
