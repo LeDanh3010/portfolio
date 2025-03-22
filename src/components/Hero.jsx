@@ -38,8 +38,8 @@ const Hero = () => {
               stiffness: 100,
             }}
           >
-            私は射出金型および <br className="sm:block hidden" />
-            樹脂製品の設計をしております。
+            私は金型および <br className="sm:block hidden" />
+            治具の設計をしております。
           </m.p>
         </div>
       </div>

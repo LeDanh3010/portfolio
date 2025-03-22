@@ -132,10 +132,10 @@ const technologies = [
 const experiences = [
   {
     title: "技術開発",
-    company_name: "BTECH 有限会社",
+    company_name: "BTECH 会社",
     icon: btech,
     iconBg: "#383E56",
-    date: "2014年 9月 - 2017年 8月",
+    date: "2014年 9月 - 2019年 7月",
     link: "http://www.btech.com.vn/",
     points: [
       "会社所在:ベトナム",
@@ -149,7 +149,7 @@ const experiences = [
     company_name: "Planex 株式会社",
     icon: planex,
     iconBg: "#E6DEDD",
-    date: "2017年 9月 - 2023年 4月",
+    date: "2019年 7月 - 2023年 4月",
     link: "https://planex-jp.co.jp/",
     points: [
       "会社所在:ベトナムと日本",
@@ -157,26 +157,26 @@ const experiences = [
       "2022年8月から2022年10月まで、埼玉車体株式会社へ出張し、CadmeisterとCATIAを用いてRoof Panel、Hemming Table、Skin Tail Gateのプレス型を設計します。",
     ],
   },
-  {
-    title: "ボビン製品設計",
-    company_name: "Tokuden 株式会社",
-    icon: tokuden,
-    iconBg: "#383E56",
-    date: "2023年 4月 - 2024年 10月",
-    link: "https://www.k-tokuden.co.jp/",
-    points: [
-      "会社所在:日本",
-      "ボビン製品の設計および図面作成をCadSuperやSolidWorksで行い、Ansysを用いて構造解析などの強度試験も担当します。",
-      "ボビン金型の設計や回転溶着機用の治具設計します。",
-      "サンプル試作、実験・評価、データ収集および分析も可能です,。また、Excelを使用して、評価実験データのレポート作成および提出も行っています。",
-    ],
-  },
+  // {
+  //   title: "ボビン製品設計",
+  //   company_name: "Tokuden 株式会社",
+  //   icon: tokuden,
+  //   iconBg: "#383E56",
+  //   date: "2023年 4月 - 2024年 10月",
+  //   link: "https://www.k-tokuden.co.jp/",
+  //   points: [
+  //     "会社所在:日本",
+  //     "ボビン製品の設計および図面作成をCadSuperやSolidWorksで行い、Ansysを用いて構造解析などの強度試験も担当します。",
+  //     "ボビン金型の設計や回転溶着機用の治具設計します。",
+  //     "サンプル試作、実験・評価、データ収集および分析も可能です,。また、Excelを使用して、評価実験データのレポート作成および提出も行っています。",
+  //   ],
+  // },
   {
     title: "カメラ部品治具設計",
     company_name: "アスパーク 株式会社",
     icon: aspark,
     iconBg: "#383E56",
-    date: "2023年 11月 - 現在",
+    date: "2024年 11月 - 現在",
     link: "https://www.aspark.co.jp/",
     points: [
       "会社所在:日本",
@@ -195,40 +195,40 @@ const testimonials = [
   {
     title: "資格",
     info1: "言語:日本語N2JLPT",
+    info3: "基本情報技術者試験：勉強中",
     info2: "専攻:メカトロニクス学科",
-    info3: "",
   },
   {
     title: "希望",
-    info1: "年収:450 ~ 550万円",
+    info1: "年収:400万円以上",
     info2: "勤務地:日本であればどこでも可",
     info3: "",
   },
 ];
 
 const projects = [
-  {
-    name: "ボビン製品設計",
-    company: "Tokuden 株式会社",
-    description:
-      "CadSuperやSolidWorksのソフトでボビンの製品に関連する設計業務に従事し、製品の構造および硬度を解析するためにANSYSソフトウェアを使用して検証を行いました。また、顧客の要求に基づき、製品の改良にも積極的に取り組んできました。さらに、製品の金型設計にも携わり、製造プロセス全体の最適化を目指します。",
-    tags: [
-      {
-        name: "nextjs",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "supabase",
-        color: "green-text-gradient",
-      },
-      {
-        name: "css",
-        color: "pink-text-gradient",
-      },
-    ],
-    poster: solidImg,
-    image: { solidImg, seihin },
-  },
+  // {
+  //   name: "ボビン製品設計",
+  //   company: "Tokuden 株式会社",
+  //   description:
+  //     "CadSuperやSolidWorksのソフトでボビンの製品に関連する設計業務に従事し、製品の構造および硬度を解析するためにANSYSソフトウェアを使用して検証を行いました。また、顧客の要求に基づき、製品の改良にも積極的に取り組んできました。さらに、製品の金型設計にも携わり、製造プロセス全体の最適化を目指します。",
+  //   tags: [
+  //     {
+  //       name: "nextjs",
+  //       color: "blue-text-gradient",
+  //     },
+  //     {
+  //       name: "supabase",
+  //       color: "green-text-gradient",
+  //     },
+  //     {
+  //       name: "css",
+  //       color: "pink-text-gradient",
+  //     },
+  //   ],
+  //   poster: solidImg,
+  //   image: { solidImg, seihin },
+  // },
   {
     name: "自動車部品金型",
     company: "Planex 株式会社",
