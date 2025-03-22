@@ -149,7 +149,7 @@ const experiences = [
     company_name: "Planex 株式会社",
     icon: planex,
     iconBg: "#E6DEDD",
-    date: "2019年 7月 - 2023年 4月",
+    date: "2019年 7月 - 2024年 10月",
     link: "https://planex-jp.co.jp/",
     points: [
       "会社所在:ベトナムと日本",
